@@ -1,0 +1,31 @@
+[project]
+name = "office-doc-assistant"
+version = "0.1.0"
+description = "Telegram bot answering questions about Excel/CSV/PDF documents using Claude."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Denys Kovtun", email = "deninarmi@gmail.com" }]
+dependencies = [
+    "anthropic>=0.92.0",
+    "python-telegram-bot>=21.0",
+    "pandas>=2.0",
+    "openpyxl>=3.1",
+    "pypdf>=4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+office-doc-bot = "src.bot:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
