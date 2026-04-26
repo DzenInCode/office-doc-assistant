@@ -1,5 +1,7 @@
 # Office Doc Assistant
 
+![office-doc-assistant](assets/cover.png)
+
 A Telegram bot that answers questions about Excel, CSV, and PDF documents using Claude (Anthropic).
 
 Upload a file → ask anything → get a grounded answer based on the document content.
